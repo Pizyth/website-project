@@ -1,0 +1,330 @@
+<html>
+ <head>
+  <title>
+   Tugaas metedologi Pembelajafan
+  </title>
+  <style>
+        /* Styling untuk paragraf/link */
+        .paragraf {
+            font-size: 16px;
+            transition: font-size 0.3s ease;
+        }
+
+        .paragraf:hover {
+            font-size: 24px; /* Teks membesar saat dihover */
+        }
+
+        /* Area tempat gambar akan muncul */
+        #image-display {
+            margin-top: 50px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* Untuk posisi bunga */
+        }
+
+        #image-display img {
+            max-width: 100%;
+            max-height: 100%;
+            display: none; /* Gambar tidak tampil secara default */
+            animation: floating 3s ease-in-out infinite; /* Tambahkan animasi melayang */
+        }
+    
+
+        /* Animasi melayang */
+        @keyframes floating {
+            0% {
+                transform: translateY(0); /* Posisi awal */
+            }
+            50% {
+                transform: translateY(-20px); /* Melayang ke atas */
+            }
+            100% {
+                transform: translateY(0); /* Kembali ke posisi awal */
+            }
+        }
+        
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+            
+
+        }
+
+        .gallery.show {
+            opacity: 1;
+            transform: translateY(0);
+            
+        }
+        .gallery a {
+            transition: transform 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+        .gallery a img {
+            width: 150px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+            
+        }
+
+        .gallery a img:hover {
+            transform: scale(1.1);
+            z-index: 1;
+            animation: floating 1s ease-in-out infinite; /* Tambahkan animasi melayang */
+        }
+
+        .gallery:hover a:not(:hover) img {
+            transform: scale(0.7);
+            
+        }
+
+         /* Footer */
+         footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer .social-icons {
+            margin: 20px 0;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        footer .social-icons a:hover {
+            color: #f77cb3;
+        }
+
+        footer p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+    </style>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  
+ </head>
+
+ <body class="bg-gray-100">
+  <header class="bg-pink-600 text-white">
+   <div class="container mx-auto flex justify-between items-center py-2">
+    <div class="flex items-center">
+     <span class="text-lg font-semibold">
+      Tugas Akhir Metodologi Pembelajaran
+     </span>
+    </div>
+    
+    <div class="flex items-center space-x-4">
+     <div class="flex items-center space-x-1">
+      <span>
+       Dosen Cidny Marisa, M.Pd
+      </span>
+     </div>
+     <div class="flex items-center space-x-1">
+      <span>
+       Kelompok 4
+      </span>
+     </div>
+     <div class="flex items-center space-x-1">
+      <span>
+       UNINDRA
+      </span>
+     </div>
+    </div>
+   </div>
+  </header>
+
+  <nav class="bg-white shadow">
+   <div class="containermx-auto flex justify-between items-center py-2">
+    <div class="flex items-center space-x-4">
+        <a class="paragraf text-gray-700 hover:text-pink-600" href="#" data-image="image1">
+            Diana Puspita Ayu
+        </a>
+        <a class="paragraf text-gray-700 hover:text-pink-600" href="#" data-image="image2">
+            Najwa Faradila
+        </a>
+        <a class="paragraf text-gray-700 hover:text-pink-600" href="#" data-image="image3">
+            Adisty Joana
+        </a>
+        <a class="paragraf text-gray-700 hover:text-pink-600" href="#" data-image="image4">
+            Ajeng Satriani Putri
+        </a>
+        <a class="paragraf text-gray-700 hover:text-pink-600" href="#" data-image="image5">
+            Nazwa Gustiani
+        </a>
+        <a class="paragraf text-gray-700 hover:text-pink-600" href="#" data-image="image6">
+            Sifa Fauziah
+        </a>
+    </div>
+
+    <div class="flex items-center space-x-4">
+     <i class="fas fa-heart text-gray-700">
+     </i>
+     <i class="fas fa-heart text-gray-700">
+    </i>
+    <i class="fas fa-heart text-gray-700">
+    </i>
+   </div>
+  </nav>
+  
+  <main class="bg-gradient-to-b from-pink-200 to-yellow-200 py-10">
+   <div class="container mx-auto text-center">
+    <h1 class="text-3xl font-bold">
+     Welcome to Bimbingan dan konseling room
+    </h1>
+    <div id="image-display">
+        <img src="dianhhh.jpg" alt="Gambar 1" id="image1">
+        <img src="najwa.jpg" alt="Gambar 2" id="image2">
+        <img src="jojo.jpg" alt="Gambar 3" id="image3">
+        <img src="anjeng.jpg" alt="Gambar 4" id="image4">
+        <img src="wawa.jpg" alt="Gambar 5" id="image5">
+        <img src="sipa.jpg" alt="Gambar 6" id="image6">
+    </div>
+
+    <!-- Bunga estetik -->
+    <span class="flower" id="flower1">🌷</span>
+    <span class="flower" id="flower2">🌷</span>
+    <span class="flower" id="flower3">🌷</span>
+    <span class="flower" id="flower4">🌷</span>
+    <span class="flower" id="flower5">🌷</span>
+    <span class="flower" id="flower1">🌷</span>
+    <span class="flower" id="flower2">🌷</span>
+    <span class="flower" id="flower3">🌷</span>
+    <span class="flower" id="flower4">🌷</span>
+    <span class="flower" id="flower5">🌷</span>
+
+    <script>
+        // Ambil semua elemen <a> dan gambar
+        const links = document.querySelectorAll(".paragraf");
+        const flowers = document.querySelectorAll(".flower");
+
+        // Fungsi untuk mengatur posisi bunga secara acak di halaman
+        function showFlowers() {
+            flowers.forEach(flower => {
+                const randomX = Math.random() * window.innerWidth;
+                const randomY = Math.random() * window.innerHeight;
+
+                flower.style.left = `${randomX}px`;
+                flower.style.top = `${randomY}px`;
+                flower.style.opacity = 1; // Tampilkan bunga
+            });
+        }
+
+        // Fungsi untuk menyembunyikan bunga
+        function hideFlowers() {
+            flowers.forEach(flower => {
+                flower.style.opacity = 0; // Sembunyikan bunga
+            });
+        }
+
+        // Tambahkan event listener hover ke setiap tautan
+        links.forEach(link => {
+            link.addEventListener("mouseenter", function() {
+                const imageId = this.getAttribute("data-image");
+                
+                // Sembunyikan semua gambar
+                document.querySelectorAll("#image-display img").forEach(img => {
+                    img.style.display = "none";
+                });
+
+                // Tampilkan gambar yang sesuai dengan tautan yang dihover
+                document.getElementById(imageId).style.display = "block";
+
+                // Tampilkan bunga saat gambar muncul
+                showFlowers();
+            });
+
+            link.addEventListener("mouseleave", function() {
+                const imageId = this.getAttribute("data-image");
+                document.getElementById(imageId).style.display = "none";
+
+                // Sembunyikan bunga saat gambar menghilang
+                hideFlowers();
+            });
+        });
+    </script>
+   </div>
+</div>
+<div class="container mx-auto mt-10">
+ <img alt="Illustration of SMA Negeri 2 Kebumen" class="w-full" height="200" src="https://storage.googleapis.com/a1aa/image/DrH6nofefKK3YocHPLxE8ooEoVeN0f7AOMKIjoM5LpyDSl4cC.jpg" width="1200"/>
+</div>
+  
+   <div class="container mx-auto text-center mt-4">
+    <h2 class="text-2xl font-bold text-red-600" >
+     HARI INI MAU MAU REFLEKSI TEMA APA?
+    </h2>
+    <button onclick="bukaTautan()">AYO PILIH</button>
+
+    <script>
+        function bukaTautan() {
+            window.open('file:///D:/Visual%20studio%20code/percobaan%203/index.html', '_blank');
+            
+        }
+    </script>
+
+   </div>
+   <div class="gallery">
+    <a href="file:///D:/Visual%20studio%20code/percobaan1/tautan1.html" target="_blank">
+        <img src="pt.jpg" alt="Image 1">
+    </a>
+    <a href="file:///D:/Visual%20studio%20code/percobaan1/tautan2.html" target="_blank">
+        <img src="Black and White Simple Quote T-Shirt (2).png" alt="Image 2">
+    </a>
+    <a href="file:///D:/Visual%20studio%20code/percobaan1/tautan3.html" target="_blank">
+        <img src="bullying.png" alt="Image 3">
+    </a>
+    <a href="file:///D:/Visual%20studio%20code/percobaan1/tautan4.html" target="_blank">
+        <img src="CYBER.png" alt="Image 4">
+    </a>
+    <a href="https://www.example5.com" target="_blank">
+        <img src="https://via.placeholder.com/200" alt="Image 5">
+    </a>
+    
+</div>
+<script>
+    // Menggunakan Intersection Observer API untuk mendeteksi saat elemen gallery terlihat
+    document.addEventListener("DOMContentLoaded", function() {
+        const gallery = document.querySelector('.gallery');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gallery.classList.add('show'); // Tambahkan kelas 'show' saat elemen terlihat
+                } else {
+                    gallery.classList.remove('show'); // Hapus kelas 'show' saat elemen tidak terlihat
+                }
+            });
+        });
+
+        observer.observe(gallery);
+    });
+</script>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2024 Tugas Akhir Metodologi Pembelajaran. All rights reserved.</p>
+</footer>
+
+ </body>
+</html>
